@@ -78,7 +78,7 @@
                     I'm a <span>Senior Software Engineer</span>
                 </h3>
                 <p>
-                    I'm a<span>Senior Software Engineer</span> and consultant connecting AI, payments, and cloud infrastructure to the products people actually use.</p>
+                    I'm a <span>Senior Software Engineer</span> and consultant connecting AI, payments, and cloud infrastructure to the products people actually use.</p>
 
                 <div class="social-icons">
                     <a href="https://github.com/fkadeal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -115,11 +115,11 @@
             <div class="about-content">
                 <h2>About <span>Me</span></h2>
                 <p>
-                    Fkadeal Matiwos, Senior software engineer and consultant based in Addis Ababa, Ethiopia, 
+                    Fkadeal Matiwos, Senior software engineer and consultant based in Addis Ababa, Ethiopia,
                     with roughly ten years of industry experience.
                      I build and operate software across AI automation, payment systems, academic operations, document workflows, and cloud infrastructure.
                      My work spans company engineering roles and independent consultancy, from integrating business services to delivering full applications and the infrastructure that supports them.
-                     
+
                 </p>
                 <a href="https://fkadeal.open.et/about/" class="btn">Read more</a>
             </div>
@@ -223,8 +223,6 @@
                     <a href="https://fkadeal.open.et/work/yayehut-marketplace/" class="btn">View project</a>
                 </div>
 
-
-
             </div>
 
             <div class="more-work">
@@ -235,7 +233,7 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="contact-form">
 
                 <div class="input-group">
                     <div class="input-box">
@@ -245,29 +243,31 @@
                         <label for="email" class="sr-only">Email</label>
                         <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
                     </div>
-                    <div class="input-box">
-                        <label for="phone" class="sr-only">Phone number</label>
-                        <div>
-                        <input type="tel" id="phone" name="phone" placeholder="0909XXXXXXXX"
-        maxlength="10"
-        inputmode="numeric"
-        autocomplete="tel" required
-        >
-    
-    <small id="phone-error" class="error-message"></small> autocomplete="tel" required>
 
-                        <label for="subject" class="sr-only">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <div class="input-box">
+                        <div class="field">
+                            <label for="phone" class="sr-only">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="09XXXXXXXX" maxlength="10" inputmode="numeric" autocomplete="tel" required>
+                            <small id="phone-error" class="error-message" role="alert"></small>
+                        </div>
+
+                        <label for="subject" class="sr-only">What would you like to discuss?</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>I'd like to discuss...</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Software Development">Software Development</option>
+                            <option value="FinTech Projects">FinTech Projects</option>
+                            <option value="Collaboration">Collaboration</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                 </div>
 
                 <label for="message" class="sr-only">Your message</label>
-                <textarea id="message" name="message" placeholder="Your message" rows="8" required></textarea>
-
-                <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <textarea id="message" name="message" placeholder="Tell me a little about the opportunity..." rows="8" maxlength="1500" required></textarea>
 
                 <div class="form-actions">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn">Open Email Draft</button>
                 </div>
 
                 <p class="form-status" id="form-status" role="status" aria-live="polite"></p>

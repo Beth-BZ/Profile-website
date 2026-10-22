@@ -19,68 +19,71 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") setMenu(false);
 });
 
+const EMAIL = "fkadeal@open.et";
+
 const form = document.querySelector("#contact-form");
+const phone = document.querySelector("#phone");
+const phoneError = document.querySelector("#phone-error");
 const statusText = document.querySelector("#form-status");
 
+function phoneProblem(value) {
+  const startsWrong = !/^(0|09)?$/.test(value) && !value.startsWith("09");
+  if (startsWrong) return "The number must start with 09.";
+  if (value.length < 10) return "Enter all 10 digits, for example 0912345678.";
+  return "";
+}
+
+if (phone) {
+  phone.addEventListener("input", () => {
+    phone.value = phone.value.replace(/\D/g, "");
+    const problem = phoneProblem(phone.value);
+    phone.setCustomValidity(problem);
+    phoneError.textContent = problem.startsWith("The number") ? problem : "";
+  });
+
+  phone.addEventListener("blur", () => {
+    if (phone.value) phoneError.textContent = phoneProblem(phone.value);
+  });
+}
+
 if (form) {
-  form.addEventListener("submit", async (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const sendButton = form.querySelector("button[type='submit']");
-    sendButton.disabled = true;
-    statusText.textContent = "Sending...";
+    const data = new FormData(form);
+    const subject = "Portfolio inquiry: " + data.get("subject");
+    const body =
+      "Name: " +
+      data.get("name") +
+      "\n" +
+      "Email: " +
+      data.get("email") +
+      "\n" +
+      "Phone: " +
+      data.get("phone") +
+      "\n\n" +
+      data.get("message");
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
 
-      if (response.ok) {
-        form.reset();
-        statusText.textContent = "Thank you! Your message was sent.";
-      } else {
-        statusText.textContent =
-          "Sorry, something went wrong. Please try again or email me directly.";
-      }
-    } catch (error) {
-      statusText.textContent =
-        "Network problem. Please check your connection and try again.";
-    }
+    const mailtoLink =
+      "mailto:" + EMAIL + "?subject=" + encodedSubject + "&body=" + encodedBody;
+    const gmailLink =
+      "https://mail.google.com/mail/?view=cm&to=" +
+      EMAIL +
+      "&su=" +
+      encodedSubject +
+      "&body=" +
+      encodedBody;
 
-    sendButton.disabled = false;
+    window.open(gmailLink, "_blank", "noopener");
+
+    statusText.textContent =
+      "Gmail should open with your message ready to send. Prefer another mail app? ";
+    const fallback = document.createElement("a");
+    fallback.href = mailtoLink;
+    fallback.textContent = "Open it in your mail app.";
+    statusText.append(fallback);
   });
-
-  const phoneInput = document.getElementById("phone");
-  const phoneError = document.getElementById("phone-error");
-
-  phoneInput.addEventListener("input", function () {
-    // Keep digits only and limit to 10 characters
-    this.value = this.value.replace(/\D/g, "").slice(0, 10);
-
-    const phone = this.value;
-
-    if (phone === "") {
-      phoneError.textContent = "";
-    } else if (!phone.startsWith("09")) {
-      phoneError.textContent = "Phone number must start with 09.";
-    } else if (phone.length < 10) {
-      phoneError.textContent = "Enter all 10 digits.";
-    } else {
-      phoneError.textContent = "";
-    }
-  });
-
-  function isValidPhone() {
-    const valid = /^09\d{8}$/.test(phoneInput.value);
-
-    if (!valid) {
-      phoneError.textContent =
-        "Enter a valid 10-digit phone number starting with 09.";
-      phoneInput.focus();
-    }
-
-    return valid;
-  }
 }

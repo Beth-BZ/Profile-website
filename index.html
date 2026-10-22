@@ -4,13 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protfolio website</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Fkadeal Matiwos | Senior Software Engineer</title>
+    <meta name="description" content="Fkadeal Matiwos is a senior software engineer in Addis Ababa, Ethiopia, building AI automation, payment integrations, full-stack SaaS and cloud systems.">
+    <meta name="author" content="Fkadeal Matiwos">
+    <meta name="theme-color" content="#080808">
+
+    <link rel="canonical" href="https://fkadeal.open.et">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fkadeal Matiwos | Senior Software Engineer">
+    <meta property="og:description" content="AI automation, payment integrations, full-stack SaaS and cloud delivery. Based in Addis Ababa, Ethiopia.">
+    <meta property="og:url" content="https://fkadeal.open.et">
+    <meta property="og:image" content="https://fkadeal.open.et/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fkadeal Matiwos",
+        "jobTitle": "Senior Software Engineer",
+        "description": "Senior software engineer working across AI automation, payment integrations, multi-tenant platforms and cloud infrastructure.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Addis Ababa",
+            "addressCountry": "ET"
+        },
+        "knowsAbout": ["AI automation", "Payment integrations", "Full-stack development", "Cloud infrastructure"],
+        "sameAs": ["https://fkadeal.open.et/"]
+    }
+    </script>
 </head>
 
 <body>
 
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <header class="header">
 
@@ -18,8 +56,9 @@
             Fkadeal <span>Matiwos</span>
         </a>
 
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <nav class="navbar">
+        <button type="button" class="bx bx-menu" id="menu-icon" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"></button>
+
+        <nav class="navbar" id="site-nav" aria-label="Main">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -27,264 +66,258 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <button class="gradient-btn">Contact me</button>
+        <a href="#contact" class="gradient-btn">Contact me</a>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi,It's <span>Fekadeal</span></h1>
-            <h3>
-                I'm a <span>Senior Software Engineer</span>
-            </h3>
-            <p>
-                Fkadeal Matiwos, senior software engineer
-                 in Addis Ababa,Ethiopia.
-                AI automation, payment integrations, full-stack SaaS,
-                 and cloud delivery.
-            </p>
+    <main id="main">
 
-            <div class="social-icons">
-                <a href="#">
-                    <i class="bx bxl-github"></i>
-                </a>
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hi, It's <span>Fkadeal</span></h1>
+                <h3>
+                    I'm a <span>Senior Software Engineer</span>
+                </h3>
+                <p>
+                    I'm a<span>Senior Software Engineer</span> and consultant connecting AI, payments, and cloud infrastructure to the products people actually use.</p>
 
-                <a href="#">
-                    <i class="bx bxl-linkedin-square"></i>
-                </a>
+                <div class="social-icons">
+                    <a href="https://github.com/fkadeal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="bx bxl-github"></i>
+                    </a>
 
-                <a href="#">
-                    <i class="bx bx-envelope"></i>
-                </a>
-         
+                    <a href="https://www.linkedin.com/in/fkadeal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin-square"></i>
+                    </a>
 
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">contact</a>
-            </div>
-            
-        </div>
-
-        <div class="home-img">
-            <img src="image.jpg" alt="">
-        </div>
-    </section>
-
-    <section class="about" id="about">
-
-        <div class="about-img">
-            <img src="image.jpg" alt="">
-        </div>
-
-        <div class="about-content">
-            <h2>About <span>Me</span></h2>
-            <p>I help teams build and operate software that connects products, payments, and business workflows. My approach combines hands-on full-stack development with attention to reliable integrations, recoverable workflows, and maintainable delivery.
-            I bring senior engineering judgment to the entire path — from product requirements through to the services that end up running in production, not just the parts that demo well.</p>
-            <a href="#" class="btn">Read more</a>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        
-        <h2 class="heading">Services</h2>
-
-        <div class="services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <i class="bx bx-brain-circuit"></i>
-                    <h4>AI Automation & Durable Workflows</h4>
-                    <p>AI workflow orchestration / Durable scheduling / Signed webhooks / ElevenLabs / Twilio / Resend / CRM integrations / Python / Flask / LangChain / ChromaDB / Document processing
-                    </p>
+                    <a href="mailto:fkadeal@open.et" aria-label="Email me">
+                        <i class="bx bx-envelope"></i>
+                    </a>
                 </div>
-            </div>
 
-            <div class="service-box">
-                <div class="service-info">
-                    <i class="bx bx-code"></i>
-                    <h4>FinTech & Payment Systems</h4>
-                    <p>Payment orchestration / Merchant checkout / Telebirr / Bank integrations / USSD / Mobile money / Transaction lifecycle / Payment callbacks / Reconciliation / Odoo / FastAPI / Go / RabbitMQ
-                    </p>
+                <div class="btn-group">
+                    <a href="#contact" class="btn">Hire me</a>
+                    <a href="https://fkadeal.open.et/resume/" class="btn">Resume</a>
                 </div>
+
             </div>
 
-            <div class="service-box">
-                <div class="service-info">
-                    <i class="bx bx-code"></i>
-                    <h4>Full-Stack SaaS & Marketplaces</h4>
-                    <p>Next.js / React / Nuxt / Vue / PHP / Laravel / NestJS / Node.js / TypeScript / Hono / Supabase / PostgreSQL / Multi-tenant architecture / API design / Academic workflows / Operational reporting / Content management
-                    </p>
+            <div class="home-img">
+                <img src="image.jpg" alt="Portrait of Fkadeal Matiwos">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+
+            <div class="about-img">
+                <img src="image.jpg" alt="Fkadeal Matiwos" loading="lazy">
+            </div>
+
+            <div class="about-content">
+                <h2>About <span>Me</span></h2>
+                <p>
+                    Fkadeal Matiwos, Senior software engineer and consultant based in Addis Ababa, Ethiopia, 
+                    with roughly ten years of industry experience.
+                     I build and operate software across AI automation, payment systems, academic operations, document workflows, and cloud infrastructure.
+                     My work spans company engineering roles and independent consultancy, from integrating business services to delivering full applications and the infrastructure that supports them.
+                     
+                </p>
+                <a href="https://fkadeal.open.et/about/" class="btn">Read more</a>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+
+            <h2 class="heading">Services</h2>
+
+            <div class="services-container">
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-brain-circuit"></i>
+                        <h4>AI Automation & Durable Workflows</h4>
+                        <p>AI workflow orchestration / Durable scheduling / Signed webhooks / ElevenLabs / Twilio / Resend / CRM integrations / Python / Flask / LangChain / ChromaDB / Document processing
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-             <div class="service-box">
-                <div class="service-info">
-                    <i class="bx bx-code"></i>
-                    <h4>Cloud Delivery & Service Operations</h4>
-                    <p>AWS / Terraform / Ansible / Kubernetes / CI/CD / Cloudflare Workers / Docker / Linux VPS / Linux hardening / Nginx / Envoy / systemd
-                    </p>
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code"></i>
+                        <h4>FinTech & Payment Systems</h4>
+                        <p>Payment orchestration / Merchant checkout / Telebirr / Bank integrations / USSD / Mobile money / Transaction lifecycle / Payment callbacks / Reconciliation / Odoo / FastAPI / Go / RabbitMQ
+                        </p>
+                    </div>
                 </div>
+
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code"></i>
+                        <h4>Full-Stack SaaS & Marketplaces</h4>
+                        <p>Next.js / React / Nuxt / Vue / PHP / Laravel / NestJS / Node.js / TypeScript / Hono / Supabase / PostgreSQL / Multi-tenant architecture / API design / Academic workflows / Operational reporting / Content management
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code"></i>
+                        <h4>Cloud Delivery & Service Operations</h4>
+                        <p>AWS / Terraform / Ansible / Kubernetes / CI/CD / Cloudflare Workers / Docker / Linux VPS / Linux hardening / Nginx / Envoy / systemd
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+
+            <h2 class="heading">Projects</h2>
+
+            <div class="projects-box">
+
+                <div class="project-card">
+                    <img src="project1.png" alt="Preview of the Email-to-Call Intake Automation project" loading="lazy">
+
+                    <h3>Email-to-Call Intake Automation</h3>
+
+                    <p>
+                        An intake workflow connecting inbound email to firm-specific routing, scheduled AI calling, and CasePeer.
+                        The engineering work sits between the message arriving and the resulting interaction becoming useful to the receiving team.
+                    </p>
+                    <a href="https://fkadeal.open.et/work/lawgical-intake-automation/" class="btn">View project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="project2.png" alt="Preview of the Signals prospect context project" loading="lazy">
+
+                    <h3>Signals: Prospect Context & Introductions</h3>
+
+                    <p>
+                        Prospect enrichment and relationship discovery organized around an ideal customer profile.
+                        Signals brings prospect context, relationship graphs, introduction links, and queues into a connected workflow.
+                    </p>
+                    <a href="https://fkadeal.open.et/work/lawgical-signals/" class="btn">View project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="project3.png" alt="Preview of the BirrLink payment systems project" loading="lazy">
+
+                    <h3>BirrLink — Payment Systems & Cloud Infrastructure</h3>
+
+                    <p>
+                        As Senior Payment Systems Engineer at BirrLink, I work across merchant checkout, payment orchestration, provider integrations, and transaction reconciliation.
+                        My responsibilities connect payment services with AWS infrastructure, deployment automation, and operational reliability.
+                    </p>
+                    <a href="https://fkadeal.open.et/work/birrlink-payments/" class="btn">View project</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="project4.png" alt="Preview of the multi-tenant marketplace project" loading="lazy">
+
+                    <h3>Multi-Tenant Marketplace</h3>
+
+                    <p>
+                        A multi-tenant marketplace spanning a Next.js interface, Hono APIs, Supabase, and a deployment footprint
+                        that includes Cloudflare Workers and Docker on a VPS.
+                    </p>
+                    <a href="https://fkadeal.open.et/work/yayehut-marketplace/" class="btn">View project</a>
+                </div>
+
+
+
             </div>
 
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-
-        <h2 class="heading">Projects</h2>
-
-
-        <div class="projects-box">
-
-            <div class="project-card">
-                <img src="project1.png" alt="">
-
-                <h3>Email-to-Call Intake Automation</h3>
-
-                <p>
-                    An intake workflow connecting inbound email to firm-specific routing, scheduled AI calling, and CasePeer. 
-                    The engineering work sits between the message arriving and the resulting interaction becoming useful to the receiving team.
-                </p>
-                <div class="btn"> <a href="https://fkadeal.open.et/work/lawgical-intake-automation/">Review project</a> </div>
+            <div class="more-work">
+                <a href="https://fkadeal.open.et/work/" class="btn">More work</a>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="project2.png" alt="">
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
 
-                <h3>Signals: Prospect Context & Introductions</h3>
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-                <p>
-                   Prospect enrichment and relationship discovery organized around an ideal customer profile. 
-                   Signals brings prospect context, relationship graphs, introduction links, and queues into a connected workflow.
-                </p>
-                <div class="btn"> <a href="https://fkadeal.open.et/work/lawgical-signals/">Review project</a></div>
-            </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name" class="sr-only">Full name</label>
+                        <input type="text" id="name" name="name" placeholder="Full name" autocomplete="name" required>
 
-            <div class="project-card">
-                <img src="project3.png" alt="">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="phone" class="sr-only">Phone number</label>
+                        <div>
+                        <input type="tel" id="phone" name="phone" placeholder="0909XXXXXXXX"
+        maxlength="10"
+        inputmode="numeric"
+        autocomplete="tel" required
+        >
+    
+    <small id="phone-error" class="error-message"></small> autocomplete="tel" required>
 
-                <h3>BirrLink — Payment Systems & Cloud Infrastructure</h3>
+                        <label for="subject" class="sr-only">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                </div>
 
-                <p>
-                    As Senior Payment Systems Engineer at BirrLink, I work across merchant checkout, payment orchestration, provider integrations, and transaction reconciliation.
-                     My responsibilities connect payment services with AWS infrastructure, deployment automation, and operational reliability.
-                </p>
-                <div class="btn"><a href="https://fkadeal.open.et/work/birrlink-payments/">Review project</a></div>
-            </div>
+                <label for="message" class="sr-only">Your message</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="8" required></textarea>
 
-            <div class="project-card">
-                <img src="project4.png" alt="">
+                <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-                <h3>Multi-Tenant Marketplace</h3>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
 
-                <p>
-                    A multi-tenant marketplace spanning a Next.js interface, Hono APIs, Supabase, and a deployment footprint 
-                    that includes Cloudflare Workers and Docker on a VPS.
-                </p>
-                <div class="btn"><a href="https://fkadeal.open.et/work/yayehut-marketplace/">Review project</a></div>
-            </div>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
 
-            <div class="project-card">
-                <img src="project5.png" alt="">
+        </section>
 
-                <h3>Student Information & Academic Operations</h3>
-
-                <p>
-                    Consultancy work on a student-information platform spanning course registration, assessment and grade workflows, graduation processes, and academic administration.
-                     Contributions connect a Nuxt/Vue interface with Laravel APIs and supporting development tooling.
-                </p>
-                <div class="btn"><a href="https://fkadeal.open.et/work/student-information-academic-operations/">Review project</a></div>
-            </div>
-
-            <div class="project-card">
-                <img src="project6.png" alt="">
-
-                <h3>Document Processing, Management & AI-Assisted Drafting</h3>
-
-                <p>
-                   Consultancy contributions across document processing, management interfaces, and AI-assisted drafting. 
-                   This combined case study brings together Python document-processing workflows and Next.js/React work on permissions, sharing, and upload experiences.
-                </p>
-                <div class="btn"><a href="https://fkadeal.open.et/work/document-processing-management-ai-drafting/">Review project</a></div>
-        </div>
-        <div class="btn"><a href="https://fkadeal.open.et/work/">Other work's</a></div>
-    </section>
-
-    <section class="contact" id="contact">
-       <h2 class="heading">Contact <span>Me</span></h2>
-
-       <form action="#">
-
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text" placeholder="Full name">
-                <input type="email" placeholder="Email">
-            </div>
-            <div class="input-box">
-                <input type="number" 
-                placeholder="Phone number">
-                <input type="text"
-                placeholder="Subject">
-            </div>
-        </div>
-        <div class="input-group-2">
-            <textarea 
-  style="width: 100%; background: transparent;  color: white; border: 1px solid var(--main-color); border-radius: 8px; padding: 10px;" 
-  placeholder="Your message" name="" id=""
-            placeholder="Your message"  cols="30" rows="10"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </div>
-       </form>
-
-    </section>
+    </main>
 
     <footer class="footer">
         <div class="social-icons">
-                <a href="#">
-                    <i class="bx bxl-github"></i>
-                </a>
+            <a href="https://github.com/fkadeal" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="bx bxl-github"></i>
+            </a>
 
-                <a href="#">
-                    <i class="bx bxl-linkedin-square"></i>
-                </a>
+            <a href="https://www.linkedin.com/in/fkadeal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin-square"></i>
+            </a>
 
-                <a href="#">
-                    <i class="bx bx-envelope"></i>
-                </a>
+            <a href="mailto:fkadeal@open.et" aria-label="Email me">
+                <i class="bx bx-envelope"></i>
+            </a>
+        </div>
 
-                <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">contact</a>
-            </div>
-                
-            </div>
-             
-            
+        <div class="btn-group">
+            <a href="#contact" class="btn">Hire me</a>
+            <a href="https://fkadeal.open.et/resume/" class="btn">Resume</a>
+        </div>
 
-            <ul class="list">
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
+        <ul class="list">
+            <li>
+                <a href="#services">Services</a>
+            </li>
 
-                <li>
-                    <a href="#services">Services</a>
-                </li>
+            <li>
+                <a href="#about">About Me</a>
+            </li>
 
-                <li>
-                    <a href="#about">About Me</a>
-                </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
 
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
 
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-
-            <p class="copyright">
-                @ Fkadeal Matiwos | All Right Reserved
-            </p>
+        <p class="copyright">
+            &copy; 2026 Fkadeal Matiwos. All rights reserved.
+        </p>
 
     </footer>
 
